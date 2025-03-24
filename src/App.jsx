@@ -6,6 +6,7 @@ import Politics from "./pages/Politics";
 import Finance from "./pages/Finance";
 import Technology from "./pages/Technology";
 import WorldNews from "./pages/WorldNews";
+import Football from "./pages/Football";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sports" element={<Sports />} />
         <Route path="/politics" element={<Politics />} />
+        <Route path="/football" element={<Football />} />
         <Route path="/finance" element={<Finance />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/world-news" element={<WorldNews />} />
