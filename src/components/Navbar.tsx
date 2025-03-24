@@ -147,6 +147,9 @@ export default function Navbar() {
                 <Link to="/real-estate" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
                   Real-estate
                 </Link>
+                <Link to="/Forex" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                  Forex Market 
+                </Link>
               </div>
             </li>
 

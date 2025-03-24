@@ -15,8 +15,10 @@ import Cycling from "./pages/Cycling"
 import StockMarketNews from "./pages/StockMarketNews" 
 import CryptoNews from "./pages/CryptoNews" 
 import BankingNews from "./pages/BankingNews" 
-import RealEstateNews from "./pages/RealEstateNews" 
-
+import RealEstateNews from "./pages/RealEstateNews"  
+import Forex from "./pages/Forex"  
+import NewsDetail from "./pages/NewsDetail";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/news/:index" element={<NewsDetail />} />
         {/* Politics */}
         <Route path="/politics" element={<Politics />} />
         {/* Sports */}
@@ -43,10 +46,12 @@ function App() {
         <Route path="/crypto" element={<CryptoNews />} />
         <Route path="/real-estate" element={<RealEstateNews />} />;
         <Route path="/banking" element={<BankingNews />} />
+        <Route path="/forex" element={<Forex />} />
 
         {/* World News */}
         <Route path="/world-news" element={<WorldNews />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
