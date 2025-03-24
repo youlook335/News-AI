@@ -40,8 +40,12 @@ export default function Navbar() {
               {activeMenu === "sports" && (
                 <div className="absolute left-0 mt-2 w-64 bg-blue-800 shadow-lg rounded-lg p-4 z-50">
                   <Link to="/football" className="block py-2 hover:bg-blue-900">Football</Link>
-                  <Link to="/sports" className="block py-2 hover:bg-blue-900">Cricket</Link>
-                  <Link to="/sports" className="block py-2 hover:bg-blue-900">Basketball</Link>
+                  <Link to="/cricket" className="block py-2 hover:bg-blue-900">Cricket</Link>
+                  <Link to="/basketball" className="block py-2 hover:bg-blue-900">Basketball</Link>
+                  <Link to="/hockey" className="block py-2 hover:bg-blue-900">Hockey</Link>
+                  <Link to="/tennis" className="block py-2 hover:bg-blue-900">Tennis</Link>
+                  <Link to="/boxing" className="block py-2 hover:bg-blue-900">Boxing</Link>
+                  <Link to="/cycling" className="block py-2 hover:bg-blue-900">Cycling</Link>
                 </div>
               )}
             </li>

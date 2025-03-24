@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
-// import { fetchFootballNews } from "../services/newsService";
 import { fetchFootballNews } from "../services/newsServicefootball";
-import Modal from "react-modal";
+import { useEffect, useState } from "react";
 
 const Football = () => {
   const [news, setNews] = useState([]);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState("");
 
   useEffect(() => {
     const loadNews = async () => {
@@ -18,55 +14,19 @@ const Football = () => {
     loadNews();
   }, []);
 
-  // 🏆 Modal Open Function
-  const openModal = (videoUrl: string) => {
-    setSelectedVideo(videoUrl);
-    setModalIsOpen(true);
-  };
-
-  // ❌ Close Modal
-  const closeModal = () => {
-    setModalIsOpen(false);
-    setSelectedVideo("");
-  };
-
   return (
-    <div className="container mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-6">⚽ Football News</h2>
-
-      {/* News List */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="container mx-auto p-4">
+      <h1 className="text-4xl text-center font-bold mb-6 text-blue-900">Football News</h1>
+      <div className="grid md:grid-cols-3 gap-4">
         {news.map((article, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-md rounded-lg p-4 cursor-pointer hover:bg-gray-200"
-            onClick={() => openModal(article.urlToImage)}
-          >
-            <img src={article.urlToImage} alt="News" className="rounded-lg" />
-            <h3 className="text-lg font-semibold mt-2">{article.title}</h3>
+          <div key={index} className="border p-4 rounded-lg shadow-lg">
+            <img src={article.urlToImage} alt={article.title} className="w-full h-40 object-cover rounded-lg" />
+            <h2 className="text-lg font-semibold mt-2">{article.title}</h2>
+            <p className="text-sm mt-1">{article.description}</p>
+            <a href={article.url} target="_blank" className="text-blue-500 mt-2 block">Read More</a>
           </div>
         ))}
       </div>
-
-      {/* Video Modal */}
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80"
-      >
-        <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-          <button
-            className="absolute top-4 right-4 text-white text-2xl"
-            onClick={closeModal}
-          >
-            ✖
-          </button>
-          <video controls className="w-full h-64 rounded-lg">
-            <source src={selectedVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </Modal>
     </div>
   );
 };
