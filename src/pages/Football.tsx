@@ -1,29 +1,50 @@
-import { fetchFootballNews } from "../services/newsServicefootball";
 import { useEffect, useState } from "react";
+
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+const NEWS_URL = `https://newsapi.org/v2/everything?q=Football&apiKey=${API_KEY}`;
 
 const Football = () => {
   const [news, setNews] = useState([]);
 
+  // 🏑 Fetch Hockey News API
   useEffect(() => {
-    const loadNews = async () => {
-      const data = await fetchFootballNews();
-      if (data?.articles) {
-        setNews(data.articles);
+    const fetchNews = async () => {
+      try {
+        const response = await fetch(NEWS_URL);
+        const data = await response.json();
+        setNews(data.articles.slice(0, 200)); // صرف 6 خبریں لو
+      } catch (error) {
+        console.error("Error fetching hockey news:", error);
       }
     };
-    loadNews();
+
+    fetchNews();
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-6">
       <h1 className="text-4xl text-center font-bold mb-6 text-blue-900">Football News</h1>
-      <div className="grid md:grid-cols-3 gap-4">
+
+
+      {/* 📰 News List */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {news.map((article, index) => (
-          <div key={index} className="border p-4 rounded-lg shadow-lg">
-            <img src={article.urlToImage} alt={article.title} className="w-full h-40 object-cover rounded-lg" />
-            <h2 className="text-lg font-semibold mt-2">{article.title}</h2>
-            <p className="text-sm mt-1">{article.description}</p>
-            <a href={article.url} target="_blank" className="text-blue-500 mt-2 block">Read More</a>
+          <div key={index} className="bg-white shadow-md rounded-lg p-4 hover:bg-gray-100">
+            <img
+              src={article.urlToImage || "https://via.placeholder.com/300"}
+              alt="News"
+              className="rounded-lg w-full h-40 object-cover"
+            />
+            <h3 className="text-lg font-semibold mt-2">{article.title}</h3>
+            <p className="text-gray-600 text-sm mt-2">{article.description}</p>
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-700 font-semibold mt-3 inline-block"
+            >
+              Read More →
+            </a>
           </div>
         ))}
       </div>

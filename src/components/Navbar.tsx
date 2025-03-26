@@ -92,76 +92,76 @@ export default function Navbar() {
 
             {/* 🏛️ Politics */}
             <li
-  className="relative group"
-  onMouseEnter={() => handleMouseEnter("politics")}
-  onMouseLeave={handleMouseLeave}
->
-  <button
-    className="block py-3 px-4 hover:text-gray-300 transition duration-300"
-    onClick={() => setActiveMenu(activeMenu === "politics" ? null : "politics")}
-  >
-    Politics
-  </button>
-  
-  <div
-    className={`absolute left-0 mt-2 w-64 bg-white text-black shadow-xl rounded-xl p-4 z-50 
+              className="relative group"
+              onMouseEnter={() => handleMouseEnter("politics")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="block py-3 px-4 hover:text-gray-300 transition duration-300"
+                onClick={() => setActiveMenu(activeMenu === "politics" ? null : "politics")}
+              >
+                Politics
+              </button>
+
+              <div
+                className={`absolute left-0 mt-2 w-64 bg-white text-black shadow-xl rounded-xl p-4 z-50 
       transition-all duration-500 transform 
       ${activeMenu === "politics" ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-5 pointer-events-none"}`}
-    style={{ maxHeight: "300px", overflowY: "auto" }}
-  >
-    <div className="max-h-60 overflow-y-auto 
+                style={{ maxHeight: "300px", overflowY: "auto" }}
+              >
+                <div className="max-h-60 overflow-y-auto 
         scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200 
         scrollbar-thumb-rounded-full scrollbar-track-rounded-full 
         hover:scrollbar-thumb-blue-700 transition-all duration-300">
-      
-      <Link to="/Pakistan" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇵🇰 Pakistan
-      </Link>
-      <Link to="/Us" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇺🇸 USA
-      </Link>
-      <Link to="/Uk" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇬🇧 UK
-      </Link>
-      <Link to="/India" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇮🇳 India
-      </Link>
-      <Link to="/Bangladesh" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇧🇩 Bangladesh
-      </Link>
-      <Link to="/China" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇨🇳 China
-      </Link>
-      <Link to="/Japan" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇯🇵 Japan
-      </Link>
-      <Link to="/Saudi_Arabia" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇸🇦 Saudi Arabia
-      </Link>
-      <Link to="/Turkey" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇹🇷 Turkey
-      </Link>
-      <Link to="/France" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇫🇷 France
-      </Link>
-      <Link to="/Germany" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇩🇪 Germany
-      </Link>
-      <Link to="/Italy" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇮🇹 Italy
-      </Link>
-      <Link to="/New_Zealand" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇳🇿 New Zealand
-      </Link>
-      <Link to="/Canada" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇨🇦 Canada
-      </Link>
-      <Link to="/Australia" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
-        🇦🇺 Australia
-      </Link>
-    </div>
-  </div>
-</li>
+
+                  <Link to="/Pakistan" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇵🇰 Pakistan
+                  </Link>
+                  <Link to="/Us" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇺🇸 USA
+                  </Link>
+                  <Link to="/Uk" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇬🇧 UK
+                  </Link>
+                  <Link to="/India" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇮🇳 India
+                  </Link>
+                  <Link to="/Bangladesh" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇧🇩 Bangladesh
+                  </Link>
+                  <Link to="/China" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇨🇳 China
+                  </Link>
+                  <Link to="/Japan" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇯🇵 Japan
+                  </Link>
+                  <Link to="/Saudi_Arabia" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇸🇦 Saudi Arabia
+                  </Link>
+                  <Link to="/Turkey" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇹🇷 Turkey
+                  </Link>
+                  <Link to="/France" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇫🇷 France
+                  </Link>
+                  <Link to="/Germany" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇩🇪 Germany
+                  </Link>
+                  <Link to="/Italy" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇮🇹 Italy
+                  </Link>
+                  <Link to="/New_Zealand" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇳🇿 New Zealand
+                  </Link>
+                  <Link to="/Canada" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇨🇦 Canada
+                  </Link>
+                  <Link to="/Australia" className="block py-2 hover:bg-gray-100 rounded-lg px-3 transition">
+                    🇦🇺 Australia
+                  </Link>
+                </div>
+              </div>
+            </li>
 
 
             {/* 💰 Finance */}
