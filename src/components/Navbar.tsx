@@ -6,7 +6,6 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  // 🛑 Mouse Leave پر تھوڑا Delay دو تاکہ dropdown فوراً hide نہ ہو
   const handleMouseEnter = (menu: string) => {
     if (dropdownTimeout) clearTimeout(dropdownTimeout);
     setActiveMenu(menu);
@@ -214,14 +213,23 @@ export default function Navbar() {
                 className={`absolute left-0 mt-2 w-64 bg-white text-black shadow-xl rounded-xl p-4 z-50 transition-all duration-300 ${activeMenu === "technology" ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
                   }`}
               >
-                <Link to="/technology/ai" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
-                  AI & Machine Learning
+                <Link to="/Machine learning" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                  Machine Learning
                 </Link>
-                <Link to="/technology/gadgets" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                <Link to="/Gadgets" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
                   Gadgets
                 </Link>
-                <Link to="/technology/software" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                <Link to="/Software" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
                   Software Development
+                </Link>
+                <Link to="/Ai Updates" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                  Updates AI 
+                </Link>
+                <Link to="/Technews" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                  Tech News
+                </Link>
+                <Link to="/startups" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                Startups
                 </Link>
               </div>
             </li>

@@ -1,10 +1,12 @@
 import React from 'react'
+import NewsPage from "../components/NewsPage"
+
 
 const WorldNews = () => {
   return (
     <>
-      This is a World News Page
-      
+      <NewsPage keyword="World News" />;
+
     </>
   )
 }

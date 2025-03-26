@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Technology from "./pages/Technology";
 import WorldNews from "./pages/WorldNews";
 import Football from "./pages/Football";
 import CricketNews from "./pages/CricketNews";
@@ -22,14 +21,20 @@ import Bangladesh from "./pages/Bangladesh"
 import India from "./pages/India"
 import Australia from "./pages/Australia"
 import Forex from "./pages/Forex"
+import AI_Updates from "./pages/AI_Updates"
+import Tech_News from "./pages/Tech_News"
 import Italy from "./pages/Italy"
 import Canada from "./pages/Canada"
 import New_zealand from "./pages/New_zealand"
+import Gadgets from "./pages/Gadgets"
+import Software from "./pages/Software"
 import China from "./pages/China"
 import France from "./pages/France"
+import Machine from "./pages/Machine"
 import Germany from "./pages/Germany"
 import Saudi_arabia from "./pages/Saudi_arabia"
 import Japan from "./pages/Japan"
+import Startups from "./pages/Startups"
 import Turkey from "./pages/Turkey"
 import NewsDetail from "./pages/NewsDetail";
 import Footer from "./components/Footer";
@@ -40,7 +45,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/news/:index" element={<NewsDetail />} />
         {/* <Route path="/Lives" element={<LiveNews />} /> */}
         {/* Politics */}
@@ -69,7 +74,12 @@ function App() {
         <Route path="/cycling" element={<Cycling />} />
         <Route path="/tennis" element={<TennisNews />} />
         {/* Technology */}
-        <Route path="/technology" element={<Technology />} />
+        <Route path="/startups" element={<Startups />} />
+        <Route path="/Technews" element={<Tech_News />} />
+        <Route path="/Ai Updates" element={<AI_Updates />} />
+        <Route path="/Software" element={<Software />} />
+        <Route path="/Gadgets" element={<Gadgets />} />
+        <Route path="/Machine learning" element={<Machine />} />
 
         {/* Finannce */}
         <Route path="/stock-market" element={<StockMarketNews />} />
