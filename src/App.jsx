@@ -20,6 +20,7 @@ import RealEstateNews from "./pages/RealEstateNews"
 import Forex from "./pages/Forex"
 import NewsDetail from "./pages/NewsDetail";
 import Footer from "./components/Footer";
+import LiveNews from "./services/LiveNews";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news/:index" element={<NewsDetail />} />
+        <Route path="/Lives" element={<LiveNews />} />
         {/* Politics */}
         <Route path="/politics" element={<Politics />} />
         {/* Sports */}
