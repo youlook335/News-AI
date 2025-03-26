@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Politics from "./pages/Politics";
 import Technology from "./pages/Technology";
 import WorldNews from "./pages/WorldNews";
 import Football from "./pages/Football";
@@ -34,7 +33,7 @@ import Japan from "./pages/Japan"
 import Turkey from "./pages/Turkey"
 import NewsDetail from "./pages/NewsDetail";
 import Footer from "./components/Footer";
-import LiveNews from "./services/LiveNews";
+import LiveNews from "./pages/LiveNews";
 
 function App() {
   return (
@@ -45,7 +44,6 @@ function App() {
         <Route path="/news/:index" element={<NewsDetail />} />
         {/* <Route path="/Lives" element={<LiveNews />} /> */}
         {/* Politics */}
-        {/* <Route path="/politics" element={<Politics />} /> */}
         <Route path="/Uk" element={<Uk />} />
         <Route path="/Us" element={<Us />} />
         <Route path="/New Zealand" element={<New_zealand />} />
