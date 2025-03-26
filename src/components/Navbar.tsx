@@ -106,15 +106,19 @@ export default function Navbar() {
                 className={`absolute left-0 mt-2 w-64 bg-white text-black shadow-xl rounded-xl p-4 z-50 transition-all duration-300 ${activeMenu === "politics" ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
                   }`}
               >
-                <Link to="/politics" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                <Link to="/Us" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
                   🇺🇸 USA
                 </Link>
-                <Link to="/politics" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                <Link to="/Uk" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
                   🇬🇧 UK
                 </Link>
-                <Link to="/politics" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                <Link to="/india" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
                   🇮🇳 India
                 </Link>
+                <Link to="/Pakistan" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
+                  🇵🇰 Pakistan
+                </Link>
+
               </div>
 
             </li>
@@ -148,7 +152,7 @@ export default function Navbar() {
                   Real-estate
                 </Link>
                 <Link to="/Forex" className="block py-2 hover:bg-gray-200 rounded-lg px-3 transition">
-                  Forex Market 
+                  Forex Market
                 </Link>
               </div>
             </li>

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Sports from "./pages/Sports";
 import Politics from "./pages/Politics";
 import Technology from "./pages/Technology";
 import WorldNews from "./pages/WorldNews";
@@ -17,6 +16,11 @@ import StockMarketNews from "./pages/StockMarketNews"
 import CryptoNews from "./pages/CryptoNews"
 import BankingNews from "./pages/BankingNews"
 import RealEstateNews from "./pages/RealEstateNews"
+import Uk from "./pages/Uk"
+import Us from "./pages/Us"
+import Pakistan from "./pages/Pakistan"
+import Bangladesh from "./pages/Bangladesh"
+import India from "./pages/India"
 import Forex from "./pages/Forex"
 import NewsDetail from "./pages/NewsDetail";
 import Footer from "./components/Footer";
@@ -29,11 +33,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news/:index" element={<NewsDetail />} />
-        <Route path="/Lives" element={<LiveNews />} />
+        {/* <Route path="/Lives" element={<LiveNews />} /> */}
         {/* Politics */}
-        <Route path="/politics" element={<Politics />} />
+        {/* <Route path="/politics" element={<Politics />} /> */}
+        <Route path="/Uk" element={<Uk />} />
+        <Route path="/Us" element={<Us />} />
+        <Route path="/India" element={<India />} />
+        <Route path="/Pakistan" element={<Pakistan />} />
+        <Route path="/Bangladesh" element={<Bangladesh />} />
+
         {/* Sports */}
-        <Route path="/sports" element={<Sports />} />
         <Route path="/football" element={<Football />} />
         <Route path="/cricket" element={<CricketNews />} />
         <Route path="/basketball" element={<BasketballNews />} />

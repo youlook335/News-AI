@@ -21,7 +21,6 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <FooterLink to="/" label="Home" />
-              <FooterLink to="/sports" label="Sports" />
               <FooterLink to="/politics" label="Politics" />
               <FooterLink to="/finance" label="Finance" />
               <FooterLink to="/technology" label="Technology" />
