@@ -10,7 +10,7 @@ const NewsPage = ({ keyword }) => {
     try {
       const response = await fetch(`https://newsapi.org/v2/everything?q=${keyword}&apiKey=${API_KEY}`);
       const data = await response.json();
-      setNews(data.articles.slice(0, 220)); // 20 خبریں لو
+      setNews(data.articles.slice(0, 30)); // 20 خبریں لو
     } catch (error) {
       console.error(`Error fetching ${keyword} news:`, error);
     }
