@@ -21,7 +21,17 @@ import Us from "./pages/Us"
 import Pakistan from "./pages/Pakistan"
 import Bangladesh from "./pages/Bangladesh"
 import India from "./pages/India"
+import Australia from "./pages/Australia"
 import Forex from "./pages/Forex"
+import Italy from "./pages/Italy"
+import Canada from "./pages/Canada"
+import New_zealand from "./pages/New_zealand"
+import China from "./pages/China"
+import France from "./pages/France"
+import Germany from "./pages/Germany"
+import Saudi_arabia from "./pages/Saudi_arabia"
+import Japan from "./pages/Japan"
+import Turkey from "./pages/Turkey"
 import NewsDetail from "./pages/NewsDetail";
 import Footer from "./components/Footer";
 import LiveNews from "./services/LiveNews";
@@ -38,9 +48,19 @@ function App() {
         {/* <Route path="/politics" element={<Politics />} /> */}
         <Route path="/Uk" element={<Uk />} />
         <Route path="/Us" element={<Us />} />
+        <Route path="/New Zealand" element={<New_zealand />} />
         <Route path="/India" element={<India />} />
         <Route path="/Pakistan" element={<Pakistan />} />
         <Route path="/Bangladesh" element={<Bangladesh />} />
+        <Route path="/Germany" element={<Germany />} />
+        <Route path="/Italy" element={<Italy />} />
+        <Route path="/China" element={<China />} />
+        <Route path="/Canada" element={<Canada />} />
+        <Route path="/Australia" element={<Australia />} />
+        <Route path="/Japan" element={<Japan />} />
+        <Route path="/France" element={<France />} />
+        <Route path="/Saudi_arabia" element={<Saudi_arabia />} />
+        <Route path="/Turkey" element={<Turkey />} />
 
         {/* Sports */}
         <Route path="/football" element={<Football />} />

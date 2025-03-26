@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-const NEWS_URL = `https://newsapi.org/v2/everything?q=Uk&apiKey=${API_KEY}`;
+const NEWS_URL = `https://newsapi.org/v2/everything?q=France&apiKey=${API_KEY}`;
 
-const Uk = () => {
+const France = () => {
   const [news, setNews] = useState([]);
 
-  // 🏏 Fetch Uk News API
+  // 🏏 Fetch France News API
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -23,7 +23,7 @@ const Uk = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-4xl text-center font-bold mb-6 text-blue-900">United Kingdom News</h1>
+      <h1 className="text-4xl text-center font-bold mb-6 text-blue-900">France News</h1>
 
       {/* 📰 News List */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -51,4 +51,4 @@ const Uk = () => {
   );
 };
 
-export default Uk;
+export default France;

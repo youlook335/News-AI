@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-const NEWS_URL = `https://newsapi.org/v2/everything?q=bangladesh&apiKey=${API_KEY}`;
+const NEWS_URL = `https://newsapi.org/v2/everything?q=New%20Zealand&language=en&apiKey=${API_KEY}`;
 
-const Bangladesh = () => {
+const New_zealand = () => {
   const [news, setNews] = useState([]);
 
-  //  Fetch Bangladesh News API
+  // 🏏 Fetch New_zealand News API
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -23,7 +23,7 @@ const Bangladesh = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-4xl text-center font-bold mb-6 text-blue-900">Bangladesh News</h1>
+      <h1 className="text-4xl text-center font-bold mb-6 text-blue-900">New Zealand News</h1>
 
       {/* 📰 News List */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -51,4 +51,4 @@ const Bangladesh = () => {
   );
 };
 
-export default Bangladesh;
+export default New_zealand;
