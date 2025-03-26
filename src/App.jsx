@@ -36,7 +36,7 @@ import Germany from "./pages/Germany"
 import Japan from "./pages/Japan"
 import Saudi_arabia from "./pages/Saudi_arabia"
 import Turkey from "./pages/Turkey"
-import NewsDetail from "./pages/NewsDetail";
+// import NewsDetail from "./pages/NewsDetail";
 import Footer from "./components/Footer";
 import LiveNews from "./pages/LiveNews";
 
@@ -46,7 +46,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/news/:index" element={<NewsDetail />} />
+        {/* <Route path="/news/:index" element={<NewsDetail />} /> */}
         {/* <Route path="/Lives" element={<LiveNews />} /> */}
         {/* Politics */}
         <Route path="/Uk" element={<Uk />} />
